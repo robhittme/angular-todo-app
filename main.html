@@ -1,0 +1,26 @@
+<div class="container">
+  <h3>{{::greetings}}</h3>
+  <p>
+    Please enter in your name!
+  </p>
+
+  <form class="" action="index.html" method="post">
+    <input type="text" ng-model="username.first_name" name="firstname" placeholder="firstname" value=""><br>
+    <input type="text" ng-model="username.last_name" name="lastname"  placeholder="lastname" value=""><br>
+    <input type="text" ng-model="username.email" name="lastname"  placeholder="email" value=""><br>
+    <button type="button" ng-click="saveUser(username)" name="button">Save New User</button>
+  </form>
+
+  <div class="row">
+    <ul>
+      <li ng-repeat='user in users'>
+        <h5>First Name: {{::user.first_name}}</h5>
+        <h5>Last Name: {{::user.last_name}}</h5>
+        <p>Email: {{::user.email}}</p>
+        <button type="button" class="btn btn-danger" name="button" ng-click="deleteUser(user.id)">Delete <span class="glyphicon glyphicon-remove"></span></button>
+        <button type="button" class="btn btn-info" name="button" ng-click="updateUser(user.id)">Edit <span class="glyphicon glyphicon-pencil"></span></button>
+        <button type="button" class="btn btn-info" name="button" ng-click="viewUser(user.id)">View <span class="glyphicon glyphicon-eye-open"></span></button>
+      </li>
+    </ul>
+  </div>
+</div>
