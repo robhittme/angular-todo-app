@@ -18,10 +18,6 @@ app.controller('MainCtrl', function($scope, $location, userInformationSvc){
     userInformationSvc.deleteUser(userId);
   }
 
-  $scope.updateUser = function(userId){
-    console.log(userId);
-  }
-
   $scope.viewUser = function(userId){
     $location.url('/about/' + userId);
   }

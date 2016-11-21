@@ -74,17 +74,11 @@ angular.module('todoAngularApp')
     }
   }
 
-  factory.updateUser = function(userInfo){
-
-  }
-
   factory.getSingleUser = function(userId){
     for (var i = 0; i < users.length; i++) {
       if(users[i].id == userId){
         return users[i];
       }
-
-
     }
   }
 

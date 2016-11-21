@@ -5,9 +5,6 @@ angular.module('todoAngularApp')
       $scope.singleUser = userInformationSvc.getSingleUser(userId);
 
     }
-
-    $scope.editUser = function($routeParams.userId){
-      userInformationSvc.editUser();
-    }
+    
     getSingleUser($stateParams.userId);
   })
